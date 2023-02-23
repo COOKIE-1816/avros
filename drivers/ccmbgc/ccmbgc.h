@@ -11,7 +11,8 @@ uint8_t ccmbgc_colSelect;
 uint8_t ccmbgc_rowSelect;
 uint8_t ccmbgc_vcc;
 
+void ccmbgc_wait();
+void ccmbgc_clock_tick();
 void ccmbgc_init();
 void ccmbgc_setVideoMode(uint8_t isGraphicsMode);
-void ccmbgc_clock_tick();
-void ccmbgc_wait();
+void ccmbgv_createColor(uint16_t color);
