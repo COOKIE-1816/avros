@@ -1,4 +1,4 @@
-#include "ccmbgc.c"
+#include "ccmbgc.h"
 #include "kernel/io/io.h"
 #include "kernel/io/digital.h"
 
