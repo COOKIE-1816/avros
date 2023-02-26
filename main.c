@@ -1,17 +1,17 @@
 #include <avr/io.h>
-#include "./kernel/io/io.h"
+#include "kernel/io/io.h"
 #include "./kernel/io/digital.h"
 
 #define POWERBUTTON 4
 
-void standby() {
+/*void standby() {
     io_init();
     while(1) {
         if(io_digital_read(POWERBUTTON) == HIGH) {
             return;
         }
     }
-};
+};*/
 
 void kmain() {
     io_init();
@@ -19,7 +19,7 @@ void kmain() {
 
 int main(void) {
     kmain();
-    standby();
+    //standby();
 
     return 0;
 }

@@ -1,9 +1,9 @@
 #include "io.h"
 #include "ports.h"
+#include <stdint.h>
+#include <avr/io.h>
 
-#include </avr/io.h>
-
-uint8_t masks [] = {
+uint8_t masks [23] = {
     DDC6, DDD0, DDD1, DDD2,
     DDD3, DDD4, DDB6, DDB7,
     DDD5, DDD6, DDD7, DDB0,
@@ -12,10 +12,10 @@ uint8_t masks [] = {
     DDB3, DDB2, DDB1,
 };
 
-enum kernel_io_modes {
+/*enum kernel_io_modes {
     kernel_io_modes_IN = 0x00,
     kernel_io_modes_OUT = 0xFF
-};
+};*/
 
 void io_mode(uint8_t pin, enum kernel_io_modes MODE) {
     uint8_t port = PORT(pin);
@@ -29,23 +29,43 @@ void io_mode(uint8_t pin, enum kernel_io_modes MODE) {
 
     if(MODE == kernel_io_modes_IN) {
         // Input
-        switch(port) {
+        /*switch (port) {
             case PORTB: DDRB |= (1 << mask); return;
             case PORTC: DDRC |= (1 << mask); return;
             case PORTD: DDRD |= (1 << mask); return;
 
             default: return;
+        }*/
+
+        if (port == PORTB) {
+            DDRB |= (1 << mask);
+        }
+        if (port == PORTC) {
+            DDRC |= (1 << mask);
+        }
+        if (port == PORTD) {
+            DDRD |= (1 << mask);
         }
 
     }
 
     // Output
-    switch(port) {
+    /*switch (port) {
         case PORTB: DDRB &= ~(1 << mask); return;
         case PORTC: DDRC &= ~(1 << mask); return;
         case PORTD: DDRD &= ~(1 << mask); return;
 
         default: return;
+    }*/
+
+    if (port == PORTB) {
+        DDRB &= ~(1 << mask);
+    }
+    if (port == PORTC) {
+        DDRC &= ~(1 << mask);
+    }
+    if (port == PORTD) {
+        DDRD &= ~(1 << mask);
     }
 };
 
