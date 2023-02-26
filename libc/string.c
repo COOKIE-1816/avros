@@ -10,3 +10,29 @@ char* CHAR(int INTEGER) {
     }
     return numberArray;
 }
+
+char* hexadecimal(long DECIMAL) {
+    /*char* number = CHAR(INTEGER);
+    char* outputBuff;*/
+
+    long quotient, remainder;
+    char* hexadecimalnum;
+    int i, j = 0;
+
+    quotient = DECIMAL;
+
+    while(quotient != 0) {
+        remainder = quotient % 16;
+
+        if (remainder < 10) {
+            hexadecimalnum[j++] = 48 + remainder;
+        }
+        else {
+            hexadecimalnum[j++] = 55 + remainder;
+        }
+
+        quotient = quotient / 16;
+    }
+
+    return hexadecimalnum;
+}
