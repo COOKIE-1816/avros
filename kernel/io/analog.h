@@ -1,3 +1,6 @@
 #pragma once
 
-void io_analog_write(uint8_t pin, uint16_t bias);
+uint8_t io_analog_aref;
+void io_analog_setAnalogReference(uint8_t AREF);
+void io_analog_init();
+uint16_t io_analog_read(uint8_t pin);
