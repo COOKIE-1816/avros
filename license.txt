@@ -5,8 +5,8 @@ OPENCL SOFTWARE LICENSE
     stylesheet, HTML pages, sound effect asnd other) used in product if it is also property of author of this
     product.
 
-	Copyright: (C) 2023 COOKIE
-	Product name: CCMB compatible Operating System
+	Copyright: (C) <year> <author(s)>
+	Product name: <product name>
 
 
 	1. USE OF SOURCE CODE 

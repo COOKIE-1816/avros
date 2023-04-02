@@ -1,1 +1,3 @@
-sudo pacman -Sy dialog gcc binutils avr-gcc avr-binutils avrdude
+sudo pacman -Sy avr-gcc avr-binutils avr-libc
+
+
