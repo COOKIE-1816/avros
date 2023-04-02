@@ -1,4 +1,5 @@
 #pragma once
+#include <stdint.h>
 
 namespace liquidCrystal {
     typedef struct liquidCrystal_t {
@@ -7,7 +8,13 @@ namespace liquidCrystal {
         int rows;
 
         public:
+
+        
+
         void init(int columns, int rows);
+        void addr(uint16_t address);
+        void charE(char c);
+        void addChar(char c, uint16_t address);
 
     } liquidCrystal_t;
 

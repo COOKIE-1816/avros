@@ -8,3 +8,4 @@ void kernel::Sleep::addWakeEvent(uint8_t func, uint8_t requiredValue) {
 
     kernel::Sleep::wakeEventList_length++;
 }
+
