@@ -12,7 +12,7 @@ namespace kernel {
     /*static uint8_t low;
     static uint8_t high;*/
 
-    uint8_t readPB(uint8_t PIN);
+    /*uint8_t readPB(uint8_t PIN);
     uint8_t readPC(uint8_t PIN);
     uint8_t readPD(uint8_t PIN);
 
@@ -22,7 +22,7 @@ namespace kernel {
 
     void writePB1(uint8_t PIN);
     void writePC1(uint8_t PIN);
-    void writePD1(uint8_t PIN);
+    void writePD1(uint8_t PIN);*/
 
     uint8_t readPin(uint8_t PIN);
     void writePin(uint8_t PIN, uint8_t VALUE);
